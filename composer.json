@@ -1,0 +1,44 @@
+{
+  "name": "vatradar/env",
+  "description": "An environment variable convenience library extension for vlucas/phpdotenv",
+  "keywords": ["env", "environment", "dotenv", "loader"],
+  "type": "library",
+  "license": "LGPL-3.0",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "VATRadar Devs",
+      "email": "dev@vatradar.net"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VatRadar\\Env\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpstan/extension-installer": "^1.2",
+    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-deprecation-rules": "^1.1",
+    "spaze/phpstan-disallowed-calls": "^2.11",
+    "phpstan/phpstan-phpunit": "^1.3",
+    "phpunit/phpunit": "^10.0"
+  },
+  "require": {
+    "php": ">=8.0",
+    "vlucas/phpdotenv": "^5.5"
+  },
+  "config": {
+    "bin-dir": "vbin",
+    "sort-packages": true,
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.6-dev"
+    }
+  }
+}
