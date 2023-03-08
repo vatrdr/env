@@ -17,6 +17,11 @@
       "VatRadar\\Env\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Env": "tests/"
+    }
+  },
   "require-dev": {
     "phpstan/extension-installer": "^1.2",
     "phpstan/phpstan": "^1.10",
