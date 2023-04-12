@@ -9,8 +9,6 @@ use Dotenv\Repository\RepositoryBuilder;
 use Dotenv\Repository\RepositoryInterface;
 use RuntimeException;
 
-use function array_key_exists;
-
 class Env
 {
     public static function init(string|Dotenv $pathOrObj, RepositoryInterface $repository = null): void
@@ -36,12 +34,8 @@ class Env
         return Dotenv::create($repository, $path);
     }
 
-    public static function get(string $var): string
+    public static function get(string $var): ?string
     {
-        if (!array_key_exists($var, $_ENV)) {
-            throw new RuntimeException('Nonexistent variable');
-        }
-
-        return $_ENV[$var];
+        return $_ENV[$var] ?? null;
     }
 }
